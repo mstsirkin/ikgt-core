@@ -39,10 +39,9 @@ else
 LDFLAGS = -T core/linker.lds -pie -s -z max-page-size=4096 -z common-page-size=4096
 endif
 
-export CC = gcc
-export AS = gcc
-export LD = ld
-export AR = ar
+export CC = ${CROSS_COMPILE}gcc
+export AS = ${CROSS_COMPILE}gcc
+export AR = ${CROSS_COMPILE}ar
 
 XMON_ELF := xmon.elf
 

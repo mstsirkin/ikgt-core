@@ -13,6 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 ################################################################################
+export CC = ${CROSS_COMPILE}gcc
+export AS = ${CROSS_COMPILE}gcc
+export AR = ${CROSS_COMPILE}ar
+
 CSOURCES = main.c
 ASOURCES = mon_entry.S
 include rule.linux
